@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+button{
+    display: flex;
+    align-self: center;
+    border-radius: 20px;
+    border: none;
+    padding: 0.4rem 1rem;
+    background-color: teal;
+    color: white;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+}
+
+.nav-brand{
+    position: relative;
+}
+
+.my-div{
+    height: 100vh;
+    background-color: blue;
+}
+
+@media only screen and (max-width:600px){
+    nav{
+        flex-direction: column;
+    }
+    .nav-brand{
+        width: 100%;
+    }
+    ul{
+        padding: 0;
+        flex-direction: column;
+        width: 100%;
+        background-color: red;
+        /* transform: translateX(-100%); */
+        transition: all 0.8s;
+        position: absolute;
+        top: 50px;
+        scale: 0;
+    }
+    li{
+        text-align: right;
+        /* margin-left: 80%; */
+    }
+    button{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        /* inset: 0; */
+        top: 20px;
+        right: 20px;
+        margin: auto;
+    }
+}
